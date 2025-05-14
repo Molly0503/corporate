@@ -1,0 +1,43 @@
+@use '../foundation/variables'as v;
+
+.about {
+  position: relative;
+
+  &-img {
+    opacity: 0;
+    margin-bottom: 30px;
+
+    @include v.mq() {
+      position: absolute;
+      width: 54%;
+      height: auto;
+    }
+  }
+
+  .l-container {
+    @include v.mq() {
+      padding-top: 120px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &-content {
+    @include v.mq() {
+      width: 37%;
+      padding-top: 51px;
+    }
+  }
+
+  &-text {
+    @include v.rem(14);
+    line-height: 2.2;
+    letter-spacing: -.2em;
+    width: 66%;
+
+    @include v.mq() {
+      width: 100%;
+      padding-right: 16px;
+    }
+  }
+}

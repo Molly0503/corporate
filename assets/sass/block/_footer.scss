@@ -1,0 +1,41 @@
+@use '../foundation/variables'as v;
+
+.footer {
+  background-color: v.$c-white;
+  @include v.rem(14);
+
+  .l-container {
+    padding-block: 48px 20px;
+
+    @include v.mq() {
+      padding-top: 40px;
+    }
+  }
+
+  &-top {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-bottom: 30px;
+    
+    @include v.mq() {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 30px;
+    }
+  }
+
+  &-title {
+    width: 80px;
+    height: auto;
+
+    @include v.mq() {
+      width: 100px;
+    }
+  }
+
+  small {
+    @include v.rem(12);
+  }
+}

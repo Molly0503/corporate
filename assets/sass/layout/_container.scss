@@ -1,0 +1,25 @@
+@use '../foundation/variables'as v;
+
+// -----------------------------------
+// Container
+// -----------------------------------
+
+// -----------------------------------
+// 各セクションの余白
+// -----------------------------------
+
+.l-container {
+  padding-bottom: 72px;
+  padding-inline: 16px;
+  margin: 0 auto;
+  max-width: v.$width-main;
+
+  @include v.mq() {
+    padding-bottom: 105px;
+  }
+}
+
+.l-inner {
+  max-width: 800px;
+  margin-inline: auto;
+}

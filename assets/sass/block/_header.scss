@@ -1,0 +1,66 @@
+@use '../foundation/variables'as v;
+
+.header {
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: v.$c-bg;
+  @include v.rem(14);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  @include v.mq() {
+    padding-inline: 90px 0;
+  }
+
+  &-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 8px;
+    padding-inline: 16px;
+
+    @include v.mq() {
+      flex-direction: row;
+      column-gap: 60px;
+      align-items: center;
+      padding-inline: 0;
+    }
+  }
+
+  &-title {
+    line-height: 0;
+    width: 80px;
+    height: auto;
+
+    @include v.mq() {
+      width: 100px;
+    }
+  }
+
+  &-nav {
+    display: flex;
+    column-gap: 30px;
+  }
+
+  &-contact {
+    background-color: v.$c-main;
+
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 200px;
+      height: 80px;
+      color: v.$c-white;
+      @include v.rem(12);
+    }
+
+    @include v.mq(sp) {
+      display: none;
+    }
+  }
+}

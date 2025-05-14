@@ -1,0 +1,65 @@
+@use '../foundation/variables'as v;
+
+.company {
+
+  .l-container {
+    position: relative;
+    padding-bottom: 0;
+
+    @include v.mq() {
+      padding-bottom: 166px;
+    }
+  }
+
+  &-container {
+    background-color: v.$c-white;
+    padding: 40px 20px 39px;
+    margin-bottom: 20px;
+
+    @include v.mq() {
+      width: 56.7%;
+      padding: 100px 62px 98px;
+      margin-bottom: 0;
+    }
+  }
+
+  &-item {
+    @include v.rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+
+    @include v.mq() {
+      display: flex;
+    }
+
+    &-head {
+      @include v.mq() {
+        width: 85px;
+      }
+    }
+
+    &-date {
+      padding-left: 14px;
+
+      @include v.mq() {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &-img {
+    opacity: 0;
+
+    @include v.mq() {
+      margin-right: 16px;
+      position: absolute;
+      width: 53%;
+      height: auto;
+      right: 0;
+      top: 81px;
+    }
+  }
+}
