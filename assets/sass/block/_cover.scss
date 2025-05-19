@@ -1,8 +1,6 @@
 @use '../foundation/variables'as v;
 
 .cover {
-  padding-top: 80px;
-
   .js-fadein {
     opacity: 0;
     transition: all 3s;

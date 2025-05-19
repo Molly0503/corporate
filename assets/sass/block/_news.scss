@@ -20,7 +20,6 @@
 
     @include v.mq() {
       grid-template-columns: repeat(3, 1fr);
-      justify-content: space-between;
     }
   }
 
@@ -28,12 +27,15 @@
     display: flex;
     column-gap: 20px;
 
-    &:not(:first-child)::before {
-      @include v.mq() {
-        content: "";
-        background-color: v.$c-main;
-        width: 1px;
-        height: 78px;
+    &:not(:first-child) {
+
+      &::before {
+        @include v.mq() {
+          content: "";
+          background-color: v.$c-main;
+          width: 1px;
+          height: 78px;
+        }
       }
     }
 

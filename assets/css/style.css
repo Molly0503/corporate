@@ -76,10 +76,8 @@ ul {
 
 .header {
   height: 80px;
-  position: fixed;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   background-color: #f0f0f0;
   font-size: 0.875rem;
   display: flex;
@@ -140,9 +138,6 @@ ul {
   }
 }
 
-.cover {
-  padding-top: 80px;
-}
 .cover .js-fadein {
   opacity: 0;
   transition: all 3s;
@@ -170,7 +165,6 @@ ul {
 @media screen and (min-width: 768px) {
   .news-container {
     grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
   }
 }
 .news-item {
