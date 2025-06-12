@@ -1,0 +1,63 @@
+@use "../../global"as g;
+
+.top-news {
+  .l-container {
+    padding-top: 72px;
+
+    @include g.mq() {
+      padding-top: 110px;
+    }
+  }
+
+  .section-title {
+    margin-bottom: 44px;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 38px;
+
+    @include g.mq() {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__item {
+    &-wrap {
+      display: flex;
+      gap: 20px;
+
+      &:not(:first-child) {
+
+        &::before {
+          @include g.mq() {
+            content: "";
+            background-color: var(--c-main);
+            width: 1px;
+            height: 78px;
+          }
+        }
+      }
+    }
+  }
+    &__header {
+      display: flex;
+      gap: 19px;
+      margin-bottom: 9px;
+    }
+
+    &__date {
+      @include g.rem(14);
+    }
+
+    &__badge {
+      @include g.rem(12);
+      background-color: var(--c-main);
+      color: var(--c-white);
+      padding-inline: 7px;
+      display: grid;
+      place-items: center;
+      line-height: 1;
+    }
+  }

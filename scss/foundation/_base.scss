@@ -1,0 +1,24 @@
+@use "../global"as g;
+
+/*!
+foundation > base
+------------------------------
+*/
+body {
+    font-family: var(--ff-main);
+    @include g.rem(16);
+    font-weight: 400;
+    line-height: var(--lh-main);
+    color: var(--c-f-main);
+}
+
+a,
+a i {
+    color: var(--c-main);
+    text-decoration: none;
+}
+
+a:hover,
+a i:hover {
+    opacity: .8;
+}

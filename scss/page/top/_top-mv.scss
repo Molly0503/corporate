@@ -1,0 +1,12 @@
+@use "../../global"as g;
+.top-mv {
+  background-image: url(../img/mainvisual_sp.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  @include g.mq() {
+    background-image: url(../img/mainvisual_pc.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+}

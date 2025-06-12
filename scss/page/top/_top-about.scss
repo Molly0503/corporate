@@ -1,0 +1,44 @@
+@use "../../global"as g;
+
+
+.top-about {
+  position: relative;
+
+  &__img {
+    opacity: 0;
+    margin-bottom: 30px;
+
+    @include g.mq() {
+      position: absolute;
+      width: 54%;
+      height: auto;
+    }
+  }
+
+  .l-container {
+    @include g.mq() {
+      padding-top: 120px;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__content {
+    @include g.mq() {
+      width: 37%;
+      padding-top: 51px;
+    }
+  }
+
+  &__text {
+    @include g.rem(14);
+    line-height: 2.2;
+    letter-spacing: -.2em;
+    width: 66%;
+
+    @include g.mq() {
+      width: 100%;
+      padding-right: 16px;
+    }
+  }
+}

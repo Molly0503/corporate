@@ -1,0 +1,20 @@
+/*!
+global > font
+------------------------------
+*/
+:root {
+    --ff-main: "Arial", sans-serif;
+}
+
+// root Size
+$fz-root: 16;
+
+// Font Size rem変換
+@mixin rem($size) {
+  font-size: calc(($size / $fz-root) * 1rem);
+}
+
+// Line height
+:root {
+    --lh-main: 1.5;
+}

@@ -1,0 +1,17 @@
+@use "../global" as g;
+
+/*!
+layout > section-body
+------------------------------
+*/
+
+
+// &-container {
+//     display: grid;
+//     grid-template-columns: 1fr;
+//     row-gap: 38px;
+
+//     @include g.mq() {
+//       grid-template-columns: repeat(3, 1fr);
+//     }
+//   }

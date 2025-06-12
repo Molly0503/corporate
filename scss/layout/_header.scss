@@ -1,0 +1,69 @@
+@use "../global"as g;
+
+/*!
+layout > header
+------------------------------
+*/
+
+
+.l-header {
+  height: 80px;
+  position: sticky;
+  top: 0;
+  background-color: var(--c-bg);
+  @include g.rem(14);
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+
+  @include g.mq() {
+    padding-left: 90px;
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    padding-inline: 16px;
+
+    @include g.mq() {
+      flex-direction: row;
+      gap: 60px;
+      align-items: center;
+      padding-inline: 0;
+    }
+  }
+
+  &__title {
+    line-height: 0;
+    width: 80px;
+    height: auto;
+
+    @include g.mq() {
+      width: 100px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 30px;
+  }
+
+  &__contact {
+    background-color: var(--c-main);
+
+    a {
+      display: grid;
+      place-items: center;
+      width: 200px;
+      height: 80px;
+      color: var(--c-white);
+      @include g.rem(12);
+    }
+
+    @include g.mq(sp) {
+      display: none;
+    }
+  }
+}

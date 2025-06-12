@@ -1,0 +1,65 @@
+@use "../../global"as g;
+
+.top-company {
+  padding-bottom: 0;
+
+  @include g.mq(pc-wide) {
+    padding-bottom: 185px;
+  }
+
+  .l-container {
+    position: relative;
+  }
+
+  &__body {
+    background-color: var(--c-white);
+    padding: 40px 20px 39px;
+    margin-bottom: 20px;
+
+    @include g.mq(pc-wide) {
+      width: 56.7%;
+      padding: 100px 62px 98px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__item {
+    @include g.rem(14);
+
+    &:not(:last-child) {
+      margin-bottom: 13px;
+    }
+
+
+    @include g.mq(pc-wide) {
+      display: flex;
+    }
+
+    &-head {
+      @include g.mq(pc-wide) {
+        width: 85px;
+      }
+    }
+
+    &-date {
+      padding-left: 14px;
+
+      @include g.mq(pc-wide) {
+        padding-left: 0;
+      }
+    }
+  }
+
+  &__img {
+    opacity: 0;
+
+    @include g.mq(pc-wide) {
+      margin-right: 16px;
+      position: absolute;
+      width: 53%;
+      height: auto;
+      right: 0;
+      top: 81px;
+    }
+  }
+}

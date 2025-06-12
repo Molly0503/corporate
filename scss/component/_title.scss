@@ -1,0 +1,36 @@
+@use "../global" as g;
+
+/*!
+component > title
+------------------------------
+*/
+
+.section-title {
+  @include g.rem(36);
+  font-weight: normal;
+  letter-spacing: .35em;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 24px;
+
+  @include g.mq() {
+    margin-bottom: 44px;
+  }
+
+  span {
+    @include g.rem(14);
+    letter-spacing: -.2em;
+    margin-bottom: 22px;
+
+    @include g.mq() {
+      margin-bottom: 36px;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-color: var(--c-main);
+    width: 40px;
+    height: 1px;
+  }
+}

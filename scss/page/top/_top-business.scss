@@ -1,0 +1,59 @@
+@use "../../global"as g;
+
+.top-business {
+  &__body {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 27px;
+
+    @include g.mq() {
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+    }
+  }
+
+  &__content {
+    &--top {
+      @include g.mq() {
+        padding-top: 100px;
+      }
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 27px;
+
+      @include g.mq() {
+        margin-bottom: 50px;
+      }
+    }
+
+    &-title {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 400;
+      @include g.rem(14);
+      margin-bottom: 9px;
+
+      &::before {
+        content: "";
+        background-color: var(--c-main);
+        width: 8px;
+        height: 1px;
+      }
+    }
+
+    &-img {
+      opacity: 0;
+      overflow: hidden;
+    }
+
+    img:hover {
+      transition: all .8s ease;
+      transform: scale(1.05);
+      filter: blur(2px);
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use "sass:map";
+
+// global > breakpoint
+// ------------------------------
+$breakpoints: (
+    sp: 'screen and (max-width: 767px)',
+    pc: 'screen and (min-width: 768px)',
+    pc-wide: 'screen and (min-width: 980px)',
+);
+
+
+// -----------------------------------
+// media query
+// -----------------------------------
+@mixin mq($bp: pc) {
+    @media #{map-get($breakpoints, $bp)} {
+        @content;
+    }
+}
